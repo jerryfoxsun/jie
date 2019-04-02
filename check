@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Jerry</title>
+		<style>
+			#div1 {
+				width: 500px;
+				height: 500px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script>
+			window.onload = function() {
+				var btn1 = document.getElementById("btn1")
+				var btn2 = document.getElementById("btn2")
+				var btn3 = document.getElementById("btn3")
+				var oDiv = document.getElementById("div1")
+				var oCh = oDiv.getElementsByTagName("input")
+				btn1.onclick = function() {
+					for (var i = 0; i < oCh.length; i++) {
+						oCh[i].checked = true;
+					}
+				}
+				btn2.onclick = function() {
+					for (var i = 0; i < oCh.length; i++) {
+						oCh[i].checked = false;
+					}
+				}
+				btn3.onclick = function() {
+					for (var i = 0; i < oCh.length; i++) {
+						if (oCh[i].checked == true) {
+							oCh[i].checked = false;
+						} else {
+							oCh[i].checked = true;
+						}
+					}
+				}
+
+			}
+		</script>
+		<input type="button" id="btn1" value="clickAll" />
+		<input type="button" id="btn2" value="unclickAll" />
+		<input type="button" id="btn3" value="clickOther" />
+		<div id="div1">
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+			<input type="checkbox" />
+		</div>
+	</body>
+
+</html>
